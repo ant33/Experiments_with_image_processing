@@ -77,4 +77,6 @@ def heat_equation(f, delta_t, K):
         new_image += delta_t * laplacian(new_image)
     return new_image
 
-
+def euclidian_norm2D(v):
+    # Here v = [v0, v1], v0, v1 -- matrixs
+    return (v[0]**2+v[1]**2)**.5

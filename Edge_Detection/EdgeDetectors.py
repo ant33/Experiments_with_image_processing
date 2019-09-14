@@ -6,11 +6,9 @@ Created on Sat Sep 14 12:37:26 2019
 """
 
 import numpy as np
-from DiffOperators import grad, laplacian
+from DiffOperators import grad, laplacian, euclidian_norm2D
 
-def euclidian_norm2D(v):
-    # Here v = [v0, v1], v0, v1 -- matrixs
-    return (v[0]**2+v[1]**2)**.5
+
 
 def grad_edge(f, eta):
     """
