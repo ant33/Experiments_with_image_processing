@@ -66,7 +66,7 @@ def Denoise_TV(f, delta_t, K, lmbd, epsilon):
                    convergence of error to zero or 
                    until reach max iteration (max num of iter. = 6000 ))
                    Stop criteria: ||u^{k+1} - u^{k}|| / ||u^{k}||  < 10^{-5}
-        lambd -- parameter of regularization
+        lmbd    -- parameter of regularization
         epsilon -- parameter of kernel
         
     Return:
@@ -96,6 +96,5 @@ def Denoise_TV(f, delta_t, K, lmbd, epsilon):
                 diverg = div2D(grad(f_in) * kernel)
                 f_new = f_in + delta_t * (lmbd * (f_0 - f_in)+diverg)
             else:
-                break
-            
+                break          
     return f_new
