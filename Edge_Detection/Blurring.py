@@ -55,6 +55,6 @@ def PeronaMalikGauss(f, delta, K, alpha, sigma):
 
     for k in range(K):
         convolution = heat_equation(f_in, delta, K_heat_eq)
-        diverg = div2D(grad(f_in) * kernel_pm(convolution, alpha)**2)
+        diverg = div2D(grad(f_in) * kernel_pm(convolution, alpha))
         f_in = f_in + delta * diverg   
     return f_in
